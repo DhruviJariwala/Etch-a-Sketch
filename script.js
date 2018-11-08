@@ -1,6 +1,7 @@
 /*-------- HTML element references -------- */
 const CONTAINER = document.querySelector(".container");
 let div;
+
 /*-------- Creating 16*16 grid -------- */
 for(i=0;i<16;i++){
     for(j=0;j<16;j++){
@@ -11,3 +12,7 @@ for(i=0;i<16;i++){
     CONTAINER.innerHTML+= "<br/>";
 }
 
+/*-------- Hover Effects -------- */
+CONTAINER.addEventListener("mouseover", function(e){
+    e.target.style.backgroundColor = "brown";
+});
