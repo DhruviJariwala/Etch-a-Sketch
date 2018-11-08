@@ -14,21 +14,20 @@ for(i=0;i<16;i++){
 }
 
 /*-------- Hover Effects -------- */
-document.addEventListener("mouseover", function(e){
+function hoverEffect(e){
     if(e.target.tagName == "DIV"){
         if(e.srcElement.id=="iddiv" || e.srcElement.className=="header"){
-            console.log(e.srcElement.id);
             return;
         }
         else{
             e.target.style.backgroundColor = "brown";
-            console.log(e.srcElement.id);
         }
     }
     else{
         return;
     }
-})
+}
+document.addEventListener("mouseover", hoverEffect);
 /*CONTAINER.addEventListener("mouseover", function(e){
     e.target.style.backgroundColor = "brown";
     console.log(e.target);
