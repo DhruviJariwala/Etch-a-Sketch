@@ -1,12 +1,43 @@
 *{
     padding: opx;
     margin: 0px;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 2px;
+    word-spacing: 1.5px;
+    font-weight: 900;
 }
 
+body{
+    background-color: #DDFFF7;
+}
+
+/*============HEADER============*/
+.clear-button{
+    width: 90px;
+    margin: 15px auto;
+}
+
+.clear-button button{
+    background-color: rgba(218, 196, 247, 0.685);
+    height: 30px;
+    width: 110px;
+    border: 0.5px solid #af00006b;
+    border-radius: 15px;
+}
+
+.clear-button button:hover,
+.clear-button button:active{
+    background-color: #a50000c0;
+    color: blanchedalmond;
+    transition: 0.5s;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+}
+
+/*============CONTAINER============*/
 .container{
     margin: 0 auto;
     width: 832px;
-}
-
-.hover{
+    background-color: rgba(255, 166, 158, 0.664);
 }
