@@ -1,22 +1,38 @@
 /*-------- HTML element references -------- */
 const CONTAINER = document.querySelector(".CONTAINER");
 const BUTTON = document.querySelector("button");
-let squareDiv, userInput, r, c;
+let squareDiv, r, c, i, j, number;
 
-/*-------- Creating 16*16 CONTAINER ---x----- */
-for(i=0;i<16;i++){
-    for(j=0;j<16;j++){
+/*-------- Default grid ---x----- */
+function getStarted(){
+    clearGrid();
+    createGrid();
+}
+
+/*-------- Clear grid ---x----- */
+function clearGrid(){
+    while (CONTAINER.firstChild) {
+        CONTAINER.removeChild(CONTAINER.firstChild);
+    }
+}
+
+/*-------- Creating grid CONTAINER ---x----- */
+function createGrid(){
+    number = prompt("Enter number between 2 to 100: ");
+    CONTAINER.style.gridTemplateColumns = "repeat("+number+", 1fr)";
+    CONTAINER.style.gridTemplateRows = "repeat("+number+", 1fr)";
+    let mul = number*number;
+    for(i=1;i<=mul;i++){
         squareDiv = document.createElement("div");
-        squareDiv.style.cssText = "height: 50px; width: 50px; border: 1px solid rgba(170, 68, 100, 0.692);; display: inline-block;";
+        squareDiv.setAttribute("class","child");
         CONTAINER.appendChild(squareDiv);
     }
-    CONTAINER.innerHTML+= "<br/>";
 }
 
 /*-------- Hover Effects -------- */
 function hoverEffect(e){
     if(e.target.tagName == "DIV"){
-        if(e.srcElement.id=="iddiv" || e.srcElement.className=="header"){
+        if(e.srcElement.id=="iddiv" || e.srcElement.className=="header" || e.srcElement.className=="clear-button"){
             return;
         }
         else{
@@ -28,13 +44,11 @@ function hoverEffect(e){
     }
 }
 document.addEventListener("mouseover", hoverEffect);
-/*CONTAINER.addEventListener("mouseover", function(e){
-    e.target.style.backgroundColor = "brown";
-    console.log(e.target);
-});*/
 
 /*-------- Clear Effects -------- */
-BUTTON.addEventListener("click", function(){
-    location.reload();
-    userInput = window.prompt("How many squares you want on a grid?");
+BUTTON.addEventListener("click", function(e){
+    getStarted();
 });
+
+
+

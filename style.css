@@ -15,6 +15,7 @@ body{
 .clear-button{
     width: 90px;
     margin: 15px auto;
+    outline: none;
 }
 
 .clear-button button{
@@ -23,6 +24,7 @@ body{
     width: 110px;
     border: 0.5px solid #af00006b;
     border-radius: 15px;
+    outline: none;
 }
 
 .clear-button button:hover,
@@ -33,11 +35,22 @@ body{
     text-decoration: none;
     cursor: pointer;
     outline: none;
+    border-radius: 15px;
 }
 
 /*============CONTAINER============*/
 .container{
-    margin: 0 auto;
-    width: 832px;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    width: 800px;
+    height: 800px;
+    background-color: blueviolet;
+    justify-content: center;
+    margin: auto;
+}
+
+.child{
+    border: 1px solid rgba(170, 68, 100, 0.692);
     background-color: rgba(255, 166, 158, 0.664);
 }
