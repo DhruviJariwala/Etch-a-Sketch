@@ -12,13 +12,40 @@ body{
 }
 
 /*============HEADER============*/
-.clear-button{
-    width: 90px;
+.header{
+    margin: 10px auto;
+    width: 500px;
+}
+
+h1{
+    color: #a50000;
+}
+
+.heading-1{
+    margin: 10px auto;
+    text-align: center;
+}
+
+.clear-button, .choose-button{
     margin: 15px auto;
     outline: none;
+    text-align: center;
 }
 
 .clear-button button{
+    position: relative;
+    right: -99px;
+    top: 17px;
+}
+
+.choose-button button{
+    width: 150px;
+    position: relative;
+    top: -28px;
+    right: 117px;
+}
+
+button{
     background-color: rgba(218, 196, 247, 0.685);
     height: 30px;
     width: 110px;
@@ -27,8 +54,7 @@ body{
     outline: none;
 }
 
-.clear-button button:hover,
-.clear-button button:active{
+button:hover, button:active{
     background-color: #a50000c0;
     color: blanchedalmond;
     transition: 0.5s;
@@ -45,9 +71,11 @@ body{
     grid-template-rows: repeat(16, 1fr);
     width: 800px;
     height: 800px;
-    background-color: blueviolet;
+    background-color: #FF8C61;
     justify-content: center;
     margin: auto;
+    box-shadow: 2px 2px 20px 7px  rgba(82, 55, 45, 0.397);
+    margin-bottom: 50px;
 }
 
 .child{
