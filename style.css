@@ -8,17 +8,17 @@
 }
 
 body{
-    background-color: #DDFFF7;
+    background-color: rgb(255, 166, 158);
 }
 
 /*============HEADER============*/
 .header{
     margin: 10px auto;
-    width: 500px;
+    width: 100%;
 }
 
 h1{
-    color: #a50000;
+    color: #0E0004;
 }
 
 .heading-1{
@@ -46,22 +46,24 @@ h1{
 }
 
 button{
-    background-color: rgba(218, 196, 247, 0.685);
+    background-color: rgb(105, 28, 7);
     height: 30px;
     width: 110px;
-    border: 0.5px solid #af00006b;
+    border: 0.5px solid rgba(240, 239, 244, 0.329);
     border-radius: 15px;
     outline: none;
+    color: rgba(240, 239, 244, 0.678);
 }
 
 button:hover, button:active{
-    background-color: #a50000c0;
-    color: blanchedalmond;
+    background-color: rgba(240, 239, 244, 0.801);
+    color: rgb(46, 16, 8);
     transition: 0.5s;
     text-decoration: none;
     cursor: pointer;
     outline: none;
     border-radius: 15px;
+    border: 0.5px solid rgb(46, 16, 8);
 }
 
 /*============CONTAINER============*/
@@ -74,11 +76,14 @@ button:hover, button:active{
     background-color: #FF8C61;
     justify-content: center;
     margin: auto;
-    box-shadow: 2px 2px 20px 7px  rgba(82, 55, 45, 0.397);
+    box-shadow: 2px 2px 20px 7px  rgba(82, 55, 45, 0.61);
     margin-bottom: 50px;
+    /*border: 50px solid #a500009a;*/
+    border: 50px solid rgba(49, 8, 31, 0.945);
+    border-radius: 25px;
 }
 
 .child{
     border: 1px solid rgba(170, 68, 100, 0.692);
-    background-color: rgba(255, 166, 158, 0.664);
+    background-color: rgb(255, 185, 179);
 }
