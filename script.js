@@ -1,6 +1,7 @@
 /*-------- HTML element references -------- */
 const CONTAINER = document.querySelector(".CONTAINER");
-const BUTTON = document.querySelector("button");
+const CLEARBUTTON = document.querySelector(".cl-button");
+const CHOOSEBUTTON = document.querySelector(".ch-button");
 let squareDiv, r, c, i, j, number, userInput;
 
 /*-------- Default Grid --------- */
@@ -24,7 +25,7 @@ function clearGrid(){
 
 /*-------- Check grid -------- */
 function checkGrid(number){
-    if(number === "" || isNaN(number) || number<=0)
+    if(number === "" || isNaN(number) || number<=0 || number>100)
     {
         if(number == null){
             defaultGrid();
@@ -42,6 +43,7 @@ function checkGrid(number){
 /*-------- Ask for Input -------- */
 function askInput(){
     userInput = prompt("Enter a number between 2 to 100: ");
+    return userInput;
 }
 
 
@@ -74,9 +76,13 @@ function hoverEffect(e){
 document.addEventListener("mouseover", hoverEffect);
 
 /*-------- Clear Effects -------- */
-BUTTON.addEventListener("click", function(e){
-    getStarted();
+CLEARBUTTON.addEventListener("click", function(e){
+    clearGrid();
+    defaultGrid();
 });
 
+CHOOSEBUTTON.addEventListener("click", function(e){
+    getStarted();
+});
 
 
