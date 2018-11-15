@@ -1,5 +1,5 @@
 *{
-    padding: opx;
+    padding: 0px;
     margin: 0px;
     font-family: 'Lato', sans-serif;
     letter-spacing: 2px;
@@ -8,7 +8,7 @@
 }
 
 body{
-    background-color: rgb(255, 166, 158);
+    background-color: #a3c9c7;
 }
 
 /*============HEADER============*/
@@ -46,13 +46,13 @@ h1{
 }
 
 button{
-    background-color: rgb(105, 28, 7);
+    background-color: rgba(240, 239, 244, 0.678);
     height: 30px;
     width: 110px;
     border: 0.5px solid rgba(240, 239, 244, 0.329);
     border-radius: 15px;
     outline: none;
-    color: rgba(240, 239, 244, 0.678);
+    color: black;
 }
 
 button:hover, button:active{
@@ -78,8 +78,6 @@ button:hover, button:active{
     margin: auto;
     box-shadow: 2px 2px 20px 7px  rgba(82, 55, 45, 0.61);
     margin-bottom: 50px;
-    /*border: 50px solid #a500009a;*/
-    border: 50px solid rgba(49, 8, 31, 0.945);
     border-radius: 25px;
 }
 
