@@ -21,6 +21,12 @@ h1{
     color: #0E0004;
 }
 
+p{
+    margin: 0 auto;
+    display: block;
+    width: 175px;
+}
+
 .heading-1{
     margin: 10px auto;
     text-align: center;
@@ -83,5 +89,5 @@ button:hover, button:active{
 
 .child{
     border: 1px solid rgba(170, 68, 100, 0.692);
-    background-color: rgb(255, 185, 179);
+    background-color: #ffb9b3;
 }

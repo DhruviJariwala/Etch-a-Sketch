@@ -67,35 +67,6 @@ function getRandomColor() {
       color += letters[Math.floor(Math.random() * 16)];
     }
     return color;
-  }
-
-/*-------- Lighten/Darken Colors -------- */
-function LightenDarkenColor(colorCode, amount) {
-    var usePound = false;
-    if (colorCode[0] == "#") {
-        colorCode = colorCode.slice(1);
-        usePound = true;
-    }
-    var num = parseInt(colorCode, 16);
-    var r = (num >> 16) + amount;
-    if (r > 255) {
-        r = 255;
-    } else if (r < 0) {
-        r = 0;
-    }
-    var b = ((num >> 8) & 0x00FF) + amount;
-    if (b > 255) {
-        b = 255;
-    } else if (b < 0) {
-        b = 0;
-    }
-    var g = (num & 0x0000FF) + amount;
-    if (g > 255) {
-        g = 255;
-    } else if (g < 0) {
-        g = 0;
-    }
-    return (usePound ? "#" : "") + (g | (b << 8) | (r << 16)).toString(16);
 }
 
 /*-------- Hover Effects -------- */
@@ -106,8 +77,6 @@ function hoverEffect(e){
         }
         else{
             let rc = getRandomColor();
-            console.log(rc);
-            console.log(LightenDarkenColor(rc,-20));
             e.target.style.backgroundColor = rc;
         }
     }
@@ -117,10 +86,24 @@ function hoverEffect(e){
 }
 document.addEventListener("mouseover", hoverEffect);
 
+
+/*-------- Clear Hover Effects -------- */
+CONTAINER.addEventListener("mousemove", (e) => {
+    if(e.which == 3){
+        e.target.style.backgroundColor = "#ffb9b3";
+    }
+});
+
+
+
 /*-------- Clear Effects -------- */
 CLEARBUTTON.addEventListener("click", function(e){
-    clearGrid();
-    defaultGrid();
+    let yes = confirm("Are you sure?");
+    if(yes == true)
+    {
+        clearGrid();
+        defaultGrid();
+    }
 });
 
 CHOOSEBUTTON.addEventListener("click", function(e){
