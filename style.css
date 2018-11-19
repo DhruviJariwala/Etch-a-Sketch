@@ -15,6 +15,7 @@ body{
 .header{
     margin: 10px auto;
     width: 100%;
+    margin-bottom: -71px;
 }
 
 h1{
@@ -32,7 +33,7 @@ p{
     text-align: center;
 }
 
-.clear-button, .choose-button{
+.clear-button, .choose-button, .rainbow-button, .bck-wht-button{
     margin: 15px auto;
     outline: none;
     text-align: center;
@@ -40,7 +41,7 @@ p{
 
 .clear-button button{
     position: relative;
-    right: -99px;
+    right: -245px;
     top: 17px;
 }
 
@@ -48,7 +49,20 @@ p{
     width: 150px;
     position: relative;
     top: -28px;
-    right: 117px;
+    right: 232px;
+}
+
+.rainbow-button button{
+    position: relative;
+    top: -73px;
+    left: 102px;
+}
+
+.bck-wht-button button{
+    position: relative;
+    top: -118px;
+    right: 53px;
+    width: 133px;
 }
 
 button{
@@ -84,7 +98,6 @@ button:hover, button:active{
     margin: auto;
     box-shadow: 2px 2px 20px 7px  rgba(82, 55, 45, 0.61);
     margin-bottom: 50px;
-    border-radius: 25px;
 }
 
 .child{
