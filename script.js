@@ -94,28 +94,18 @@ function darken(e){
 }
 
 /*-------- Black and White Effect -------- */
-let ba = false;
-let ra = false;
 function blacke(){
-    ra = false;
-    ba = true;
-    console.log("Inside black"+"\nra "+ra+"\nba "+ba);
     CONTAINER.addEventListener("mouseover", (e) => {
         e.target.style.backgroundColor = "black";
-        console.log(e.target.style.backgroundColor);
     });
 }
 BWBUTTON.addEventListener("click", blacke);
 
 /*-------- Rainbow Effect -------- */
 function rainbow(){
-    ra = true;
-    ba = false;
-    console.log("Inside Rainbow"+"\nra "+ra+"\nba "+ba);
     CONTAINER.addEventListener("mouseover", (e) => {
         let rc = getRandomColor();
         e.target.style.backgroundColor = rc;
-        console.log(e.target.style.backgroundColor);
     });
 }
 RAINBOWBUTTON.addEventListener("click", rainbow);
